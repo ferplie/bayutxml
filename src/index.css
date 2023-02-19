@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin-top: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --Navy: #2f1e5e;
+  --Red: #d44327;
+  --Yellow: #f2a437;
+  --Blue: #5876b1;
+  --Green: #6ab445;
+  --Grey: #7b7b7b;
+  --Text: #ffffff;
+}
+body {
+  /* font-family: "Verdana", Times, serif; */
+  min-height: 100vh;
+}
+.red-text {
+  color: red;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  text-align: center;
+}
+.message-container {
+  padding-top: 2em;
+}
+.message-container.box-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex-grow: 1;
+  line-height: 0.01rem;
+}
+
+.message-container.box-2 {
+  flex-grow: 1;
+}
+.message-container.box-3 {
+  flex-grow: 1;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+div.div_middle {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+div.div_inner {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Red);
+  flex-grow: 1;
+  border-style: dashed;
+}
+div.div_user {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+div.div_user > * {
+  flex-basis: 100%;
+}
+
+.tacbox {
+  display: block;
+  padding: 1em;
+  margin: 2em;
+  border: 3px solid #ddd;
+  background-color: #eee;
+  max-width: 800px;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+  flex: 1 1 auto;
+  gap: 0.5rem;
+  background-color: white;
+  color: var(--Red);
+}
+.page-header {
+  font-size: xx-large;
+}
+
+button {
+  height: 30px;
+  background-color: var(--Navy);
+  color: white;
+  cursor: pointer;
+}
+.checkbox {
+  height: 30px;
+}
+.message_style {
+  color: var(--Red);
+  flex-wrap: wrap;
+}
+
+input {
+  height: 2rem;
+  font-size: 18px;
+  margin: 1rem;
+}
+.green_input {
+  color: green;
+}
+.flex_black {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+}
+.flex_black > * {
+  flex-basis: 100%;
+}
+
+/* Align content left */
+.content_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.accordion__heading {
+  background-color: #ebebeb;
+  padding: 0.5rem 0;
+  border-top: 1px solid;
+}
+
+.accordion {
+  border: 1px solid;
+}
+
+.accordion__item:first-child .accordion__heading {
+  border-top: 0px;
+}
+
+.accordion__panel {
+  border-top: 1px solid;
+  padding: 0.5rem;
+}
+.div_box {
+  display: flex;
+  flex-direction: column;
+}
+.div_box.weather_box {
+  display: flex;
+
+  flex-direction: column;
+}
+div.sub_box.weather_box {
+  display: flex;
+}
+div.sub_box.weather_box > * {
+  flex-basis: 100%;
+}
+.weather_icon {
+  height: 2em;
+}
+.centerContent {
+  display: flex;
+  justify-content: center;
+}
+
+.loadshedding_div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px;
+  width: 50%;
+  margin: auto;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

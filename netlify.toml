@@ -1,0 +1,25 @@
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "build"
+  # the root website directory
+  command = "npm run build"
+  # the build command
+  functions = "functions/"
+  
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
